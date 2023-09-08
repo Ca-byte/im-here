@@ -16,6 +16,7 @@ export default function Home() {
       <Text style={styles.eventDate}>
         Wednesday, September 7, 2023.
       </Text>
+      <View style={styles.form}>
       <TextInput 
       placeholder="guest's name"
       placeholderTextColor={"#6B6B6B"}
@@ -24,6 +25,7 @@ export default function Home() {
       <TouchableOpacity style={styles.button} onPress={handleGuestAdd}>
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
+      </View>
     </View>
   )
 }
