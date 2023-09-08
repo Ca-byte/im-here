@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
       padding: 24
   },
   eventName: {
-    color: '#FDFCFE',
+    color: '#FFFF',
       fontSize: 24,
       fontWeight: 'bold',
       marginTop: 48
@@ -15,5 +15,12 @@ export const styles = StyleSheet.create({
   eventDate: {
     color: '#6B6B6B',
     fontSize: 16
+  },
+  input: {
+    backgroundColor:'#1F1E25',
+    borderRadius: 5,
+    color: '#FFFF',
+    padding: 16,
+    fontSize: 16,
   }
 })
