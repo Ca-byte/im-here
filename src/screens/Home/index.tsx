@@ -27,7 +27,7 @@ export default function Home() {
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       </View>
-      <Guest />
+      <Guest name="Caroline Vieira"/>
     </View>
   )
 }
