@@ -1,12 +1,19 @@
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { Guest } from "../../components/Guest";
+import { FormEvent } from "react";
 
 
 
 export default function Home() {
+
   function handleGuestAdd(){
     console.log('Added')
+
+  }
+
+  function handleRemoveGuest(name: string){
+    console.log(`You just deleted ${name}`)
   }
   return (
     <View style={styles.container}>
@@ -27,7 +34,7 @@ export default function Home() {
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       </View>
-      <Guest name="Caroline Vieira"/>
+      <Guest name="Oprah winfrey" onRemove={() => handleRemoveGuest("Oprah winfrey")}/>
     </View>
   )
 }
