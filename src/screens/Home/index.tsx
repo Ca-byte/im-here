@@ -1,11 +1,14 @@
-import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import { styles } from "./styles";
 import { Guest } from "../../components/Guest";
-import { FormEvent } from "react";
+
 
 
 
 export default function Home() {
+  const guests = [
+    'Goran','Maja', 'Jeh', 'Milijana', 'Luiza', 'Celia', 'Hamilton', 'Maycon', 'Mariane'
+  ];
 
   function handleGuestAdd(){
     console.log('Added')
@@ -34,7 +37,17 @@ export default function Home() {
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       </View>
-      <Guest name="Oprah winfrey" onRemove={() => handleRemoveGuest("Oprah winfrey")}/>
+      <ScrollView showsVerticalScrollIndicator={false}>      
+      {
+        guests.map((guest)=> (
+
+          <Guest 
+          key={guest}
+          name={guest} 
+          onRemove={() => handleRemoveGuest(guest)}/>
+        ))
+      }
+      </ScrollView>
     </View>
   )
 }
