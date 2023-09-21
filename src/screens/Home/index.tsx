@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import { Text, View, TextInput, TouchableOpacity,FlatList } from "react-native";
 import { styles } from "./styles";
 import { Guest } from "../../components/Guest";
 
@@ -37,17 +37,21 @@ export default function Home() {
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>      
-      {
-        guests.map((guest)=> (
-
+      <FlatList
+        data={guests}
+        keyExtractor={item => item}
+        renderItem={({item})=>(
           <Guest 
-          key={guest}
-          name={guest} 
-          onRemove={() => handleRemoveGuest(guest)}/>
-        ))
-      }
-      </ScrollView>
+          key={item}
+          name={item} 
+          onRemove={() => handleRemoveGuest(item)}/>
+        )}
+        showsVerticalScrollIndicator={false}
+        ListEmptyComponent={()=> (
+          <Text style={styles.listEmptyText}>Oh no! Nobody has done a check-in yet :(</Text>
+        )}
+
+       />
     </View>
   )
 }
