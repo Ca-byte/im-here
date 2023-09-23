@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity,FlatList } from "react-native";
+import { Text, View, TextInput, TouchableOpacity,FlatList, Alert } from "react-native";
 import { styles } from "./styles";
 import { Guest } from "../../components/Guest";
 
@@ -11,12 +11,22 @@ export default function Home() {
   ];
 
   function handleGuestAdd(){
-    console.log('Added')
-
+    if(guests.includes("Goran")){
+      return Alert.alert(`This guest, already exist!`)
+    }
   }
 
   function handleRemoveGuest(name: string){
-    console.log(`You just deleted ${name}`)
+    Alert.alert("Remove", `Are you sure about to delete ${name}?` ,[
+    { 
+      text: "yes",
+      onPress: ()=> Alert.alert("Deleted!")
+    },
+    {
+      text: "não",
+      style: "cancel"
+    }
+    ])
   }
   return (
     <View style={styles.container}>
