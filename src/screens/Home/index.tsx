@@ -7,14 +7,17 @@ import { useState } from "react";
 
 
 export default function Home() {
-  const [guests, setGuests] = useState(['Carol'])
+  const [guests, setGuests] = useState<string[]>([])
+  const [newGuests, setNewGuests] = useState('')
 
   function handleGuestAdd(){
-    if(guests.includes("Goran")){
+    if(guests.includes(newGuests)){
       return Alert.alert(`This guest, already exist!`)
+  
     }
 
-    setGuests(prevState => [...prevState, 'Goran']);
+    setGuests(prevState => [...prevState, newGuests]);
+    setNewGuests('')
   }
 
   function handleRemoveGuest(name: string){
@@ -40,6 +43,8 @@ export default function Home() {
       </Text>
       <View style={styles.form}>
       <TextInput 
+      value={newGuests}
+      onChangeText={setNewGuests}
       placeholder="guest's name"
       placeholderTextColor={"#6B6B6B"}
       style={styles.input} 
