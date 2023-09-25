@@ -1,19 +1,20 @@
 import { Text, View, TextInput, TouchableOpacity,FlatList, Alert } from "react-native";
 import { styles } from "./styles";
 import { Guest } from "../../components/Guest";
+import { useState } from "react";
 
 
 
 
 export default function Home() {
-  const guests = [
-    'Goran','Maja', 'Jeh', 'Milijana', 'Luiza', 'Celia', 'Hamilton', 'Maycon', 'Mariane'
-  ];
+  const [guests, setGuests] = useState(['Carol'])
 
   function handleGuestAdd(){
     if(guests.includes("Goran")){
       return Alert.alert(`This guest, already exist!`)
     }
+
+    setGuests(prevState => [...prevState, 'Goran']);
   }
 
   function handleRemoveGuest(name: string){
