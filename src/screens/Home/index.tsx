@@ -21,10 +21,12 @@ export default function Home() {
   }
 
   function handleRemoveGuest(name: string){
+    
+    
     Alert.alert("Remove", `Are you sure about to delete ${name}?` ,[
     { 
       text: "yes",
-      onPress: ()=> Alert.alert("Deleted!")
+      onPress: ()=> setGuests(prevState => prevState.filter(guest => guest !== name))
     },
     {
       text: "não",
