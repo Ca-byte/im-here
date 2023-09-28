@@ -33,18 +33,18 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
-        Event's Name
+        React Native Meetup
       </Text>
 
       <Text style={styles.eventDate}>
-        Wednesday, September 7, 2023.
+        Friday, September 29, 2023.
       </Text>
 
       <View style={styles.form}>
         <TextInput 
           value={newGuests}
           onChangeText={setNewGuests}
-          placeholder="guest's name"
+          placeholder="Guest's Name"
           placeholderTextColor={"#6B6B6B"}
           style={styles.input} 
         />

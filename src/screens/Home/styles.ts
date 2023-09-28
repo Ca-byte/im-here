@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   
   },
   eventName: {
-    color: '#FFFF',
+    color: '#0057E9',
       fontSize: 24,
       fontWeight: 'bold',
       marginTop: 48
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 5,
-    backgroundColor: '#31CF67',
+    backgroundColor: '#87E911',
     alignItems: "center",
     justifyContent: "center",
   }, 
