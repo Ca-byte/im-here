@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
 		marginBottom: 12
 	},
+
 	name: {
 		flex: 1,
 		color: '#FFFF',
@@ -16,6 +17,7 @@ export const styles = StyleSheet.create({
 		paddingLeft: 16
 
 	},
+
 	button:{
 	 width: 56,
 	 height: 56,
@@ -28,6 +30,5 @@ export const styles = StyleSheet.create({
  buttonText: {
 	 color: '#FFFF',
 	 fontSize: 24,
-
  }
 })

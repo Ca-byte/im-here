@@ -13,11 +13,10 @@
   <a href="#clipboard-requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#keyboard-how-to-run-the-project">How to run the project </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </div>
-<br>
-
 
 <br>
 
+---
 ## :memo: Project 
 
 This is a simple React Native application that allows event organizers to manage a guest list for an event. Organizers can add new guests, check-in attendees, and remove guests from the list.
@@ -30,8 +29,10 @@ This is a simple React Native application that allows event organizers to manage
 - Informative message when the guest list is empty.
 
 This is a project developed during React Native bootcamp **[Ignite](https://github.com/Rocketseat)**, run by **[@Rocketseat](https://github.com/Rocketseat)**.
+
 <br>
 
+---
 ## :rocket: Technologies ##
 
 This project was developed using the following technologies:

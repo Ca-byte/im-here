@@ -7,16 +7,19 @@ export const styles = StyleSheet.create({
     padding: 24,
   
   },
+
   eventName: {
     color: '#0057E9',
       fontSize: 24,
       fontWeight: 'bold',
       marginTop: 48
   },
+
   eventDate: {
     color: '#6B6B6B',
     fontSize: 16
   },
+
   input: {
     flex: 1,
     backgroundColor:'#1F1E25',
@@ -26,6 +29,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginRight: 12
   },
+
   form: {
     width: '100%',
     flexDirection: "row",
@@ -34,6 +38,7 @@ export const styles = StyleSheet.create({
 
 
   },
+
    button:{
     width: 56,
     height: 56,
@@ -47,6 +52,7 @@ export const styles = StyleSheet.create({
     color: '#FFFF',
     fontSize: 24,
   },
+  
   listEmptyText: {
     color: '#FFFF',
     fontSize: 16,
